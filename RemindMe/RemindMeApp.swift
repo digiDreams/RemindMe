@@ -13,7 +13,11 @@ struct RemindMeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            adsListView()
+            // Injecter les données dans l'app
+                .environment(\.managedObjectContext, dataController.container.viewContext)
+            // Maintenir à jour les manip de données: autre property wrapper
+//                .fetchRequest
         }
     }
 }
