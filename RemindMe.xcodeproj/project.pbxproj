@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B62B6DC29AF94910022F103 /* RemindMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B62B6DA29AF94910022F103 /* RemindMe.xcdatamodeld */; };
 		7BD3C54429AF6AF80038D527 /* RemindMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C54329AF6AF80038D527 /* RemindMeApp.swift */; };
 		7BD3C54629AF6AF80038D527 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C54529AF6AF80038D527 /* ContentView.swift */; };
 		7BD3C54829AF6AFA0038D527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD3C54729AF6AFA0038D527 /* Assets.xcassets */; };
 		7BD3C54B29AF6AFA0038D527 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD3C54A29AF6AFA0038D527 /* Preview Assets.xcassets */; };
 		7BD3C55229AF6B790038D527 /* adsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C55129AF6B790038D527 /* adsListView.swift */; };
 		7BD3C55429AF6B9A0038D527 /* adsWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C55329AF6B9A0038D527 /* adsWheelView.swift */; };
-		7BD3C55B29AF6C9A0038D527 /* Assignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C55929AF6C9A0038D527 /* Assignment.xcdatamodeld */; };
 		7BD3C55E29AF6F0D0038D527 /* adsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C55D29AF6F0C0038D527 /* adsModel.swift */; };
 		7BD3C56029AF88800038D527 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C55F29AF88800038D527 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B62B6DB29AF94910022F103 /* RemindMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindMe.xcdatamodel; sourceTree = "<group>"; };
 		7BD3C54029AF6AF80038D527 /* RemindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD3C54329AF6AF80038D527 /* RemindMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeApp.swift; sourceTree = "<group>"; };
 		7BD3C54529AF6AF80038D527 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		7BD3C54A29AF6AFA0038D527 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BD3C55129AF6B790038D527 /* adsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adsListView.swift; sourceTree = "<group>"; };
 		7BD3C55329AF6B9A0038D527 /* adsWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adsWheelView.swift; sourceTree = "<group>"; };
-		7BD3C55A29AF6C9A0038D527 /* Assignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Assignment.xcdatamodel; sourceTree = "<group>"; };
 		7BD3C55D29AF6F0C0038D527 /* adsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adsModel.swift; sourceTree = "<group>"; };
 		7BD3C55F29AF88800038D527 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,8 +108,8 @@
 		7BD3C55C29AF6CAA0038D527 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				7BD3C55929AF6C9A0038D527 /* Assignment.xcdatamodeld */,
 				7BD3C55F29AF88800038D527 /* DataController.swift */,
+				7B62B6DA29AF94910022F103 /* RemindMe.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -185,8 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD3C56029AF88800038D527 /* DataController.swift in Sources */,
+				7B62B6DC29AF94910022F103 /* RemindMe.xcdatamodeld in Sources */,
 				7BD3C54629AF6AF80038D527 /* ContentView.swift in Sources */,
-				7BD3C55B29AF6C9A0038D527 /* Assignment.xcdatamodeld in Sources */,
 				7BD3C55429AF6B9A0038D527 /* adsWheelView.swift in Sources */,
 				7BD3C54429AF6AF80038D527 /* RemindMeApp.swift in Sources */,
 				7BD3C55E29AF6F0D0038D527 /* adsModel.swift in Sources */,
@@ -393,13 +393,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7BD3C55929AF6C9A0038D527 /* Assignment.xcdatamodeld */ = {
+		7B62B6DA29AF94910022F103 /* RemindMe.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7BD3C55A29AF6C9A0038D527 /* Assignment.xcdatamodel */,
+				7B62B6DB29AF94910022F103 /* RemindMe.xcdatamodel */,
 			);
-			currentVersion = 7BD3C55A29AF6C9A0038D527 /* Assignment.xcdatamodel */;
-			path = Assignment.xcdatamodeld;
+			currentVersion = 7B62B6DB29AF94910022F103 /* RemindMe.xcdatamodel */;
+			path = RemindMe.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

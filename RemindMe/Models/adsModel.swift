@@ -7,37 +7,40 @@
 
 import Foundation
 
-struct Hastobedone {
+struct thingsToDo {
+    
+    enum Category: String {
+        case financial
+        case cleaning
+        case health
+        case social
+        
+    }
+    
+    enum Priority: String {
+        case low = "df"
+        case medium = "sd"
+        case high = "Prioritaire"
+    }
+    
+    enum Status: String {
+        case todo
+        case complete
+        case overdue
+    }
+    
     var id: UUID
     var title: String
     var date: Date // TimeWriting Date.now
-    var category: String // enum des cat
-    var priority: String // enum des priorities
-    var status: String // enum Bool false by default e
+    var category: Category // enum des cat
+    var priority: Priority // enum des priorities
+    var status: Status // enum Bool false by default e
 }
 
-enum Categories {
-    case financial
-    case cleaning
-    case health
-    case social
-    
-}
 
-enum Priorities {
-    case low
-    case medium
-    case high
-}
-
-enum Status {
-    case todo
-    case complete
-    case overdue
-}
 /*
-struct TimeWriting {
-    var id: UUID
-    var now = Date.now
-}
-*/
+ struct TimeWriting {
+ var id: UUID
+ var now = Date.now
+ }
+ */
