@@ -14,7 +14,7 @@ struct RemindMeApp: App {
     var body: some Scene {
         WindowGroup {
             adsListView()
-            // Injecter les données dans l'app
+            // Etape 2: Injecter les données dans l'app (load/change), dans l'environment (following code line). Asap as placed in environment, automatically used by SwiftUI.
                 .environment(\.managedObjectContext, dataController.container.viewContext)
             // Maintenir à jour les manip de données: autre property wrapper
 //                .fetchRequest

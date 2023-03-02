@@ -4,7 +4,7 @@
 //
 //  Created by Apprenant 16 on 01/03/2023.
 //
-
+/*
 import Foundation
 
 struct thingsToDo {
@@ -31,12 +31,15 @@ struct thingsToDo {
     
     var id: UUID
     var title: String
+    var content: String
     var date: Date // TimeWriting Date.now
+    var notifyme: Date
     var category: Category // enum des cat
     var priority: Priority // enum des priorities
     var status: Status // enum Bool false by default e
+    
 }
-
+*/
 
 /*
  struct TimeWriting {

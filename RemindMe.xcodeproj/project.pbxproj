@@ -16,6 +16,7 @@
 		7BD3C55429AF6B9A0038D527 /* adsWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C55329AF6B9A0038D527 /* adsWheelView.swift */; };
 		7BD3C55E29AF6F0D0038D527 /* adsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C55D29AF6F0C0038D527 /* adsModel.swift */; };
 		7BD3C56029AF88800038D527 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C55F29AF88800038D527 /* DataController.swift */; };
+		7BF3C33C29B0E65E0095C15D /* adsListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3C33B29B0E65E0095C15D /* adsListViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7BD3C55329AF6B9A0038D527 /* adsWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adsWheelView.swift; sourceTree = "<group>"; };
 		7BD3C55D29AF6F0C0038D527 /* adsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adsModel.swift; sourceTree = "<group>"; };
 		7BD3C55F29AF88800038D527 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		7BF3C33B29B0E65E0095C15D /* adsListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adsListViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				7BD3C55129AF6B790038D527 /* adsListView.swift */,
+				7BF3C33B29B0E65E0095C15D /* adsListViewRow.swift */,
 				7BD3C55329AF6B9A0038D527 /* adsWheelView.swift */,
 			);
 			path = Views;
@@ -190,6 +193,7 @@
 				7BD3C55429AF6B9A0038D527 /* adsWheelView.swift in Sources */,
 				7BD3C54429AF6AF80038D527 /* RemindMeApp.swift in Sources */,
 				7BD3C55E29AF6F0D0038D527 /* adsModel.swift in Sources */,
+				7BF3C33C29B0E65E0095C15D /* adsListViewRow.swift in Sources */,
 				7BD3C55229AF6B790038D527 /* adsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
