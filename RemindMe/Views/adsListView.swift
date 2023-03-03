@@ -19,50 +19,30 @@ struct adsListView: View {
     
     // Optional in Core Data and Swift have same name, but conceptually totally different.
     
+    // Showing our stored Apps
+    @State private var showingAddScreen = false
+    
+    var checkDataBase: String {
+        if thingsToComplete.count == 0 {
+            return "zzZZzzZZZ c'est le calme plat ici."
+        } else {
+            return "Vous avez \(thingsToComplete.count) truc à faire, faign***e !"}
+    }
     var body: some View {
         NavigationStack {
             VStack {
-                List(thingsToComplete) {thingToComplete in
-                    Text(thingToComplete.title ?? "NC")
-                }
-                
+                Text(checkDataBase)
+                /*
+                 List(thingsToComplete) {thingToComplete in
+                 Text(thingToComplete.title ?? "NC")
+                 }
+                 */
                 // Button
                 
-                Button("Save") {
+                Button("New") {
                     
-                    // Instancier des données fictives
                     
-                    let someAdsTitles = ["Pharmacie", "Courses", "Ménage", "Soirée", "RDV ORL"]
-                    let someAdsContents = ["Faire le lit", "Acheter trois packs de 1664", "3 boîtes d'Immodium", "Faire MAJ de carte vitale"]
-                    let someAdsDates = [Date.distantFuture, Date.now, Date.distantPast]
-                    let someAdsNotifications = [Date.distantFuture]
-                    let someAdsCategories = ["Etudes/travail", "Santé", "Quotidien", "Médical", "Loisirs"]
-                    let someAdsPriorities = ["high", "medium", "low"]
-                    let someAdsStatus = ["A faire", "Terminé", "En retard"]
-                    
-                    // Element au hasard
-                    
-                    let chosenAdsTitle = someAdsTitles.randomElement() ?? "rawTitle"
-                    let chosenAdsContent =  someAdsContents.randomElement() ?? "rawContent"
-                    let chosenAdsDate = someAdsDates.randomElement()
-                    let chosenAdsNotification = someAdsNotifications.randomElement()
-                    let chosenAdsCategory = someAdsCategories.randomElement() ?? "raw Category"
-                    let chosenAdsPriority = someAdsPriorities.randomElement() ?? "rawPriority"
-                    let chosenAdsStatus = someAdsStatus.randomElement() ?? "raw Status"
-                    
-                    let thingToComplete = Thingstodo(context: moc)
-                    thingToComplete.id = UUID()
-                    thingToComplete.title = "\(chosenAdsTitle)"
-                    thingToComplete.content = "\(chosenAdsContent)"
-                    thingToComplete.date = chosenAdsDate
-                    thingToComplete.notuser = chosenAdsNotification
-                    thingToComplete.category = "\(chosenAdsCategory)"
-                    thingToComplete.priority = "\(chosenAdsPriority)"
-                    thingToComplete.status = "\(chosenAdsStatus)"
-                    
-                    try? moc.save()
-                    
-                }
+                }.padding() // String(Image(systemName: "plus.circle.fill"))
             }.navigationTitle("RemindMe")
         }
     }
