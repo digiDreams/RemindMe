@@ -18,17 +18,17 @@ struct adsCreateView: View {
     @State private var getAdPriority = "" //: [Priority]
     @State private var getAdStatus = "" //: [Status]
     
-    let categories = ["Budget", "Ménage", "Santé", "Sorties", "Travaux"]//: [Category]
-    let priorities = ["Urgent", "Modéré", "Peu attendre"] //: [Priority]
-    let status = ["A faire", "Terminé", "En retard"] //: [Status]
+    let allCategories = ["Budget", "Ménage", "Santé", "Sorties", "Travaux"]//: [Category]
+    let allPriorities = ["Urgent", "Modéré", "Peu attendre"] //: [Priority]
+    let allStatus = ["A faire", "Terminé", "En retard"] //: [Status]
     
     var body: some View {
         NavigationStack{
             Form {
                 Section {
                     TextField("Truc relou à faire ?", text: $getAdTitle)
-                    TextEditor(text: $getAdContent)
-                    // "Détails/précisions sur le truc relou:"
+                    TextField("Détails/précisions sur le truc relou:", text: $getAdContent)
+                    // TextEditor 
                 }
                /* Section {
                     DatePicker(selection: $getAdDate, in ...Date.now, displayedComponents: .date)
@@ -38,17 +38,17 @@ struct adsCreateView: View {
                 } */
                 Section {
                     Picker("Type de tâche:", selection: $getAdCategory) {
-                        ForEach(categories, id: \.self) {
+                        ForEach(allCategories, id: \.self) {
                             Text($0)
                         }
                     }
                     Picker("Degré d'urgence:", selection: $getAdPriority) {
-                        ForEach(priorities, id: \.self) {
+                        ForEach(allPriorities, id: \.self) {
                             Text($0)
                         }
                     }
                     Picker("Status:", selection: $getAdStatus) {
-                        ForEach(status, id: \.self) {
+                        ForEach(allStatus, id: \.self) {
                             Text($0)
                         }
                     }
@@ -56,7 +56,16 @@ struct adsCreateView: View {
                 Section {
                     Button("Save") {
                         let newAd = Thingstodo(context: moc)
-                        newAd.id = 
+                        newAd.id = UUID()
+                        newAd.content = getAdContent
+                        // newAd.date = getAdDate
+                        // newAd.notuser = getAdNotify
+                        newAd.category = getAdCategory
+                        newAd.priority = getAdPriority
+                        newAd.status = getAdStatus
+                        
+                        try? moc.save()
+                        
                     } .frame(maxWidth: 400, maxHeight: 400, alignment: .center)
                 }
             }.navigationTitle("What ToDo today ?")
