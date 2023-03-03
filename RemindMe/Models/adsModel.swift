@@ -47,3 +47,24 @@ struct thingsToDo {
  var now = Date.now
  }
  */
+
+/*
+enum Category: String {
+    case financial = "Budget"
+    case cleaning = "Ménage"
+    case health = "Santé"
+    case social = "Sorties"
+}
+
+enum Priority: String {
+    case low = "Peu attendre"
+    case medium = "Modéré"
+    case high = "Urgent"
+}
+
+enum Status: String {
+    case todo = "A faire"
+    case complete = "Terminé"
+    case overdue = "En retard"
+}
+*/

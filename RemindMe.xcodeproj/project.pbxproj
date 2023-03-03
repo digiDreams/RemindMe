@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B62B6DC29AF94910022F103 /* RemindMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7B62B6DA29AF94910022F103 /* RemindMe.xcdatamodeld */; };
+		7B6A93B529B1F9620014D5D0 /* adsCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6A93B429B1F9620014D5D0 /* adsCreateView.swift */; };
 		7BD3C54429AF6AF80038D527 /* RemindMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C54329AF6AF80038D527 /* RemindMeApp.swift */; };
 		7BD3C54629AF6AF80038D527 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3C54529AF6AF80038D527 /* ContentView.swift */; };
 		7BD3C54829AF6AFA0038D527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD3C54729AF6AFA0038D527 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		7B62B6DB29AF94910022F103 /* RemindMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindMe.xcdatamodel; sourceTree = "<group>"; };
+		7B6A93B429B1F9620014D5D0 /* adsCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adsCreateView.swift; sourceTree = "<group>"; };
 		7BD3C54029AF6AF80038D527 /* RemindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD3C54329AF6AF80038D527 /* RemindMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindMeApp.swift; sourceTree = "<group>"; };
 		7BD3C54529AF6AF80038D527 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				7BD3C55129AF6B790038D527 /* adsListView.swift */,
 				7BF3C33B29B0E65E0095C15D /* adsListViewRow.swift */,
+				7B6A93B429B1F9620014D5D0 /* adsCreateView.swift */,
 				7BD3C55329AF6B9A0038D527 /* adsWheelView.swift */,
 			);
 			path = Views;
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD3C56029AF88800038D527 /* DataController.swift in Sources */,
+				7B6A93B529B1F9620014D5D0 /* adsCreateView.swift in Sources */,
 				7B62B6DC29AF94910022F103 /* RemindMe.xcdatamodeld in Sources */,
 				7BD3C54629AF6AF80038D527 /* ContentView.swift in Sources */,
 				7BD3C55429AF6B9A0038D527 /* adsWheelView.swift in Sources */,

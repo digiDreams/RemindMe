@@ -17,48 +17,53 @@ struct adsListView: View {
     
     @FetchRequest(sortDescriptors: []) var thingsToComplete: FetchedResults<Thingstodo>
     
-  
-    
     // Optional in Core Data and Swift have same name, but conceptually totally different.
     
     var body: some View {
-        VStack {
-            List(thingsToComplete) {thingToComplete in
-                Text(thingToComplete.title ?? "NC")
-            }
-            
-            Button("Ajouter") {
+        NavigationStack {
+            VStack {
+                List(thingsToComplete) {thingToComplete in
+                    Text(thingToComplete.title ?? "NC")
+                }
                 
-                // Instancier des données fictives
+                // Button
                 
-                let someAdsTitles = ["Pharmacie", "Courses", "Ménage", "Soirée", "RDV ORL"]
-                let someAdsContents = ["Faire le lit", "Acheter trois packs de 1664", "3 boîtes d'Immodium", "Faire MAJ de carte vitale"]
-                let someAdsDates = [Date.distantFuture, Date.now, Date.distantPast]
-                let someAdsNotifications = [Date.distantFuture]
-                let someAdsCategories = ["Etudes/travail", "Santé", "Quotidien", "Médical", "Loisirs"]
-                let someAdsPriorities = ["high", "medium", "low"]
-                let someAdsStatus = ["A faire", "Terminé", "En retard"]
-                
-                // Element au hasard
-                
-                let chosenAdsTitle = someAdsTitles.randomElement() ?? "rawTitle"
-                let chosenAdsContent =  someAdsContents.randomElement() ?? "rawContent"
-                let chosenAdsDate = someAdsDates.randomElement()
-                let chosenAdsCategory = someAdsCategories.randomElement() ?? "raw Category"
-                let chosenAdsPriority = someAdsPriorities.randomElement() ?? "rawPriority"
-                let chosenAdsStatus = someAdsStatus.randomElement() ?? "raw Status"
-                
-                let thingToComplete = Thingstodo(context: moc)
-                thingToComplete.id = UUID()
-                thingToComplete.title = "\(chosenAdsTitle)"
-                thingToComplete.date = chosenAdsDate
-                thingToComplete.category = "\(chosenAdsCategory)"
-                thingToComplete.priority = "\(chosenAdsPriority)"
-                thingToComplete.status = "\(chosenAdsStatus)"
-                
-                try? moc.save()
-                
-            }
+                Button("Save") {
+                    
+                    // Instancier des données fictives
+                    
+                    let someAdsTitles = ["Pharmacie", "Courses", "Ménage", "Soirée", "RDV ORL"]
+                    let someAdsContents = ["Faire le lit", "Acheter trois packs de 1664", "3 boîtes d'Immodium", "Faire MAJ de carte vitale"]
+                    let someAdsDates = [Date.distantFuture, Date.now, Date.distantPast]
+                    let someAdsNotifications = [Date.distantFuture]
+                    let someAdsCategories = ["Etudes/travail", "Santé", "Quotidien", "Médical", "Loisirs"]
+                    let someAdsPriorities = ["high", "medium", "low"]
+                    let someAdsStatus = ["A faire", "Terminé", "En retard"]
+                    
+                    // Element au hasard
+                    
+                    let chosenAdsTitle = someAdsTitles.randomElement() ?? "rawTitle"
+                    let chosenAdsContent =  someAdsContents.randomElement() ?? "rawContent"
+                    let chosenAdsDate = someAdsDates.randomElement()
+                    let chosenAdsNotification = someAdsNotifications.randomElement()
+                    let chosenAdsCategory = someAdsCategories.randomElement() ?? "raw Category"
+                    let chosenAdsPriority = someAdsPriorities.randomElement() ?? "rawPriority"
+                    let chosenAdsStatus = someAdsStatus.randomElement() ?? "raw Status"
+                    
+                    let thingToComplete = Thingstodo(context: moc)
+                    thingToComplete.id = UUID()
+                    thingToComplete.title = "\(chosenAdsTitle)"
+                    thingToComplete.content = "\(chosenAdsContent)"
+                    thingToComplete.date = chosenAdsDate
+                    thingToComplete.notuser = chosenAdsNotification
+                    thingToComplete.category = "\(chosenAdsCategory)"
+                    thingToComplete.priority = "\(chosenAdsPriority)"
+                    thingToComplete.status = "\(chosenAdsStatus)"
+                    
+                    try? moc.save()
+                    
+                }
+            }.navigationTitle("RemindMe")
         }
     }
 }
