@@ -9,6 +9,7 @@ import SwiftUI
 
 struct adsCreateView: View {
     @Environment (\.managedObjectContext) var moc
+    @Environment (\.dismiss) var dismiss
     
     @State private var getAdTitle = ""
     @State private var getAdContent = ""
@@ -30,12 +31,12 @@ struct adsCreateView: View {
                     TextField("Détails/précisions sur le truc relou:", text: $getAdContent)
                     // TextEditor 
                 }
-               /* Section {
-                    DatePicker(selection: $getAdDate, in ...Date.now, displayedComponents: .date)
-                    Text("Deadline du truc relou:")
-                    DatePicker(selection: $getAdNotify, in ...Date.now, displayedComponents: .date)
-                    Text("Jour de rappel du truc relou:")
-                } */
+                /* Section {
+                 DatePicker(selection: $getAdDate, in ...Date.now, displayedComponents: .date)
+                 Text("Deadline du truc relou:")
+                 DatePicker(selection: $getAdNotify, in ...Date.now, displayedComponents: .date)
+                 Text("Jour de rappel du truc relou:")
+                 } */
                 Section {
                     Picker("Type de tâche:", selection: $getAdCategory) {
                         ForEach(allCategories, id: \.self) {
@@ -65,6 +66,7 @@ struct adsCreateView: View {
                         newAd.status = getAdStatus
                         
                         try? moc.save()
+                        dismiss()
                         
                     } .frame(maxWidth: 400, maxHeight: 400, alignment: .center)
                 }

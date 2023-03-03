@@ -26,24 +26,33 @@ struct adsListView: View {
         if thingsToComplete.count == 0 {
             return "zzZZzzZZZ c'est le calme plat ici."
         } else {
-            return "Vous avez \(thingsToComplete.count) truc à faire, faign***e !"}
+            return "Vous avez \(thingsToComplete.count) trucs à faire, bougez-vous le glüft faign***e !"}
     }
     var body: some View {
         NavigationStack {
             VStack {
+                Text("\(thingsToComplete.count) tâches à faire.")
+                    .padding()
+                    .bold()
                 Text(checkDataBase)
-                /*
-                 List(thingsToComplete) {thingToComplete in
-                 Text(thingToComplete.title ?? "NC")
-                 }
-                 */
-                // Button
-                
-                Button("New") {
-                    
-                    
+                Button {
+                    showingAddScreen.toggle()
+                } label: {
+                    Text("New")
                 }.padding() // String(Image(systemName: "plus.circle.fill"))
             }.navigationTitle("RemindMe")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showingAddScreen.toggle()
+                        } label: {
+                            Label("New Task", systemImage: "plus.circle.fill")
+                        }
+                    }
+                }
+                .sheet(isPresented: $showingAddScreen) {
+                    adsCreateView()
+                }
         }
     }
 }
